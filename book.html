@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header class="hd">
+    <div class="navbar navbar-light bg-light shadow-sm">
+        <div class="container">
+          <a href="#" class="navbar-brand d-flex align-items-center md-4">
+            <img src="img/GAIKWAD.png" width="80" height="80" fill="none" id="img1">
+            <strong id="logohead">Construction <br> & Planners</strong>
+          </a>
+          <ul class="nav justify-content-center display-flex nav-light" id="nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">होम</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="book.html"> बुक करा</a>         
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aboutUs.html">संपर्क</a>
+              </li>
+             
+            </ul> 
+        </div>
+      </div>
+    </header>
+    <div class="container-fluid">
+        <h6 class="heading">बुक करा आणि माहिती पाठवा </h6>
+        <form class="formform">
+            <input type="text" placeholder="पूर्ण नाव" id="name"><br>
+            <input type="number" placeholder="फोन नंबर" id="phoneNumber"><br>
+            <input type="text" placeholder="पत्ता" id="add"><br>
+            <input type="text" placeholder="जागेचे ठिकाण " id="place"><br>
+            <input type="number" placeholder=" लांबी" class="inpu" id="inpu1">
+            <input type="number" placeholder="रुंदी " class="inpu" id="breadth"><br>
+            <input type="number" placeholder="क्षेत्रफळ" id="area"><br>
+            
+            <select name="" id="optn" class="opt">
+                <option value="पर्याय " class="opt2" id="optn1">पर्याय निवडा </option>
+                <option value="रॉ हाऊस">रॉ हाऊसेस</option>
+                <option value="अपार्टमेंट">अपार्टमेंट</option>
+                <option value="बंगला">बंगला</option>
+                <option value="2D प्लॅन">2D प्लॅन</option>
+                <option value="3D प्लॅन">3D प्लॅन</option>
+                <option value="इंटेरियर डिसाइन">इंटेरियर डिसाइन</option>
+                <option value="बिल्डिंग एस्टिमेशन">बिल्डिंग एस्टिमेशन</option>
+                <option value="स्टील डिसाइन">स्टील डिसाइन</option>
+                <option value="गव्हर्मेंट कॉन्ट्रॅक्टर">गव्हर्मेंट कॉन्ट्रॅक्टर</option>
+                <option value="गव्हर्मेंट कॉन्ट्रॅक्टर">1 RK</option>
+                <option value="गव्हर्मेंट कॉन्ट्रॅक्टर">2 BHK</option>
+                <option value="गव्हर्मेंट कॉन्ट्रॅक्टर">3 BHK</option>
+                <option value="गव्हर्मेंट कॉन्ट्रॅक्टर">4 BHK</option>
+            </select><br> 
+            <input type="text" placeholder=" दिशा " class="basic" id="basic1"><br>
+            <button type="button" class="btn1" onclick="whatsapp()">Send</button>   
+          </form>
+    </div>
+    <script>
+        function whatsapp(){
+        var name = document.getElementById("name").value;
+        var phoneNumber = document.getElementById("phoneNumber").value;
+        var add = document.getElementById("add").value;
+        var place = document.getElementById("place").value;
+        var length = document.getElementById("inpu1").value;
+        var breadth = document.getElementById("breadth").value;
+        var area = document.getElementById("area").value;
+        var option = document.getElementById("optn").value;
+        var basicImf = document.getElementById("basic1").value;
+
+        var url ="https://wa.me/917350650095?text="
+        +"पूर्ण नाव:"+name+"%0a"
+        +"फोन नंबर:"+phoneNumber+"%0a"
+        +"पत्ता:"+add+"%0a"
+        +"जागेचे ठिकाण:"+place+"%0a"
+        +"लांबी:"+length+"%0a"
+        +"रुंदी:"+breadth+"%0a"
+        +"क्षेत्रफळ:"+area+"%0a"
+        +"पर्याय:"+option+"%0a"
+        +"दिशा:"+basicImf;
+
+        window.open(url,'_blank').focus();
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+     crossorigin="anonymous"></script>
+</body>
+</html>
